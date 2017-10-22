@@ -1,0 +1,5 @@
+{
+  "katas/rounding/test_rounding.py::test_rounding[1.7-2]": true,
+  "katas/rounding/test_rounding.py::test_rounding[4.25-4.5]": true,
+  "katas/stats_for_athletics/test_stats_for_athletics.py::test_stats[01|01|01-Range: 00,|00,00 Average: 01|01|01 Median: 01|01|01]": true
+}
