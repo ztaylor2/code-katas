@@ -46,15 +46,18 @@ Hint: Your output for the side must always be a rectangle! So spaces at the end 
 If the string is null or empty, you should exactly return this value for the watch-methods and -1 for the count-methods. ."""
 
 
-def pyramid(string):
+def pyramid(characters):
     """."""
-    depth = len(string)
+    # I solved it backwords
+    characters[::-1]
+
+    depth = len(characters)
     letter_line = depth + (depth - 1)
     first_poss = int((letter_line / 2) + .5)
 
     pos_to_print_letter = [first_poss]
 
-    for x, letter in enumerate(string):
+    for x, letter in enumerate(characters):
         line = ''
         for i in range(letter_line):
             if i in pos_to_print_letter:
