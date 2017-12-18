@@ -1,5 +1,7 @@
 """
 Implement an algorithm that determines if a string has all unique charactors.
+
+Solution: O(n)
 """
 
 
