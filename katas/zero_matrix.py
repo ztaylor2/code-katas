@@ -7,6 +7,33 @@ CTCI 1.8.
 
 def zero_matrix(a_matrix):
     """Zero matrix."""
+    rows = len(a_matrix)
+    cols = len(a_matrix[0])
+    zeros = []
     # store all zeros in dict
+    for i in rows:
+        for j in cols:
+            if a_matrix[i][j] == 0:
+                zeros.append((i, j))
 
-    # covert respective rows/cols to zeros
+    # make rows zeros
+    for zero in zeros:
+        for x in cols:
+            a_matrix[zero[0]][x] = 0
+
+    # make cols zeros
+    for zero in zeros:
+        zero[1]
+        for x in rows:
+            a_matrix[zero[x]][zero[1]] = 0
+
+    print(a_matrix)
+
+    if __name__ == '__main__':
+        a_matrix = [
+            [1, 2, 3],
+            [1, 2, 3],
+            [1, 2, 3]
+        ]
+
+        print(zero_matrix(a_matrix))
