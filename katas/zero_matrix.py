@@ -10,30 +10,31 @@ def zero_matrix(a_matrix):
     rows = len(a_matrix)
     cols = len(a_matrix[0])
     zeros = []
+
     # store all zeros in dict
-    for i in rows:
-        for j in cols:
+    for i in range(rows):
+        for j in range(cols):
             if a_matrix[i][j] == 0:
                 zeros.append((i, j))
 
     # make rows zeros
     for zero in zeros:
-        for x in cols:
+        for x in range(cols):
             a_matrix[zero[0]][x] = 0
 
     # make cols zeros
     for zero in zeros:
         zero[1]
-        for x in rows:
-            a_matrix[zero[x]][zero[1]] = 0
+        for x in range(rows):
+            a_matrix[x][zero[1]] = 0
 
-    print(a_matrix)
+    return a_matrix
 
-    if __name__ == '__main__':
-        a_matrix = [
-            [1, 2, 3],
-            [1, 2, 3],
-            [1, 2, 3]
-        ]
+if __name__ == '__main__':
+    a_matrix = [
+        [1, 2, 3],
+        [1, 2, 0],
+        [1, 2, 3]
+    ]
 
-        print(zero_matrix(a_matrix))
+    print(zero_matrix(a_matrix))
