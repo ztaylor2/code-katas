@@ -11,7 +11,7 @@ def zero_matrix(a_matrix):
     cols = len(a_matrix[0])
     zeros = []
 
-    # store all zeros in dict
+    # locate and store all zeros in dict
     for i in range(rows):
         for j in range(cols):
             if a_matrix[i][j] == 0:
@@ -24,7 +24,6 @@ def zero_matrix(a_matrix):
 
     # make cols zeros
     for zero in zeros:
-        zero[1]
         for x in range(rows):
             a_matrix[x][zero[1]] = 0
 
