@@ -29,3 +29,9 @@ def test_refactored_comp():
     """Test refactored compression."""
     from string_compression import string_comp_refactored
     assert string_comp_refactored('aaaabbbcdddeefffff') == 'a4b3c1d3e2f5'
+
+
+def test_ref_one_char():
+    """Test refactored returns correctly one char."""
+    from string_compression import string_comp_refactored
+    assert string_comp_refactored('a') == 'a'

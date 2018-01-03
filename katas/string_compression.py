@@ -71,4 +71,6 @@ def string_comp_refactored(uncompressed_string):
     else:
         compressed_string += char
         compressed_string += str(count)
+    if len(uncompressed_string) <= len(compressed_string):
+        return uncompressed_string
     return compressed_string
