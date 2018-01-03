@@ -53,6 +53,7 @@ def encode(input_string):
     return lst
 """
 
+
 def string_comp_refactored(uncompressed_string):
     """Refactor of string compression method."""
     count = 1
@@ -60,4 +61,14 @@ def string_comp_refactored(uncompressed_string):
     compressed_string = ''
     for char in uncompressed_string:
         if char != prev:
-            
+            if prev:
+                compressed_string += prev
+                compressed_string += str(count)
+            count = 1
+            prev = char
+        else:
+            count += 1
+    else:
+        compressed_string += char
+        compressed_string += str(count)
+    return compressed_string
