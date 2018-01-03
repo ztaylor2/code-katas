@@ -2,13 +2,13 @@
 
 
 def test_compression_simple():
-    """."""
+    """Test compression with only one repeated charactor."""
     from string_compression import string_compression
     assert string_compression('aaaa') == 'a4'
 
 
 def test_compression_multiple_chars():
-    """."""
+    """Test compression with multiple charactors."""
     from string_compression import string_compression
     assert string_compression('aaabbb') == 'a3b3'
 
