@@ -14,7 +14,7 @@ def string_compression(uncompressed_string):
     compressed_string = ''
     i = 0
     x = 0
-    while i + x < len(uncompressed_string):
+    while i < len(uncompressed_string):
         # import pdb; pdb.set_trace()
         compressed_string += uncompressed_string[i]
         x = 0
