@@ -15,4 +15,4 @@ def test_3_by_3():
                         [8, 5, 2],
                         [9, 6, 3]
                     ]
-    expect rotate_matrix(matrix_input) == matrix_output
+    assert rotate_matrix(matrix_input) == matrix_output

@@ -22,6 +22,10 @@ output: [
 """
 
 
-def rotate_matrix(image_string):
+def rotate_matrix(input_matrix):
     """Rotate an image by 90 degrees."""
-    pass
+    output_matrix = input_matrix
+    for i in [0, 1, 2]:
+        for j in [0, 1, 2]:
+            output_matrix[j][3 - i] = input_matrix[i][j]
+    return output_matrix
