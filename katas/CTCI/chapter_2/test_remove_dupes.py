@@ -242,6 +242,27 @@ def test_remove_dupes_move_vals_in_list():
     assert test_ll.size() == 3
 
 
+def test_remove_multiple_diff_dupes():
+    """Test remove dupes removes multiple different duplications."""
+    from remove_dupes import LinkedList
+    test_ll = LinkedList()
+    test_ll.push(1)
+    test_ll.push(2)
+    test_ll.push(1)
+    test_ll.push(2)
+    test_ll.remove_dupes()
+    assert test_ll.size() == 2
+
+
 def test_remove_multiple_dupes():
     """Test remove dupes w multiple instances of duplications."""
-    pass
+    from remove_dupes import LinkedList
+    test_ll = LinkedList()
+    test_ll.push(1)
+    test_ll.push(2)
+    test_ll.push(3)
+    test_ll.push(1)
+    test_ll.push(1)
+    test_ll.remove_dupes()
+    # import pdb; pdb.set_trace()
+    assert test_ll.size() == 3
