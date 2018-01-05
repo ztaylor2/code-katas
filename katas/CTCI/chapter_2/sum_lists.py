@@ -15,7 +15,6 @@ def sum_lists(list1, list2):
         second_num = str(list2.pop()) + second_num
 
     list_sum = str(int(first_num) + int(second_num))
-    # import pdb; pdb.set_trace()
     sum_list = LinkedList()
 
     for letter in list_sum:
