@@ -279,3 +279,13 @@ def test_kth_to_last():
     test_ll.push(5)
     test_ll.push(6)
     assert test_ll.kth_to_last(3) == [4, 3, 2, 1]
+    assert test_ll.kth_to_last(5) == [2, 1]
+
+
+def test_kth_to_last_k_longer_than_list():
+    """Test error thrown when k longer than list."""
+    from kth_to_last import LinkedList
+    test_ll = LinkedList()
+    test_ll.push(1)
+    with pytest.raises(IndexError):
+        test_ll.kth_to_last(3)

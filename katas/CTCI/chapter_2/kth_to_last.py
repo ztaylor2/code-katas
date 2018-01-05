@@ -120,6 +120,8 @@ class LinkedList(object):
 
     def kth_to_last(self, k):
         """Return the kth to last elements in linked list."""
+        if k > self._counter:
+            raise IndexError('K greater than length of list.')
         current_node = self.head
         for i in range(k - 1):
             current_node = current_node.next
