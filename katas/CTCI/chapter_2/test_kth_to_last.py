@@ -278,4 +278,4 @@ def test_kth_to_last():
     test_ll.push(4)
     test_ll.push(5)
     test_ll.push(6)
-    assert test_ll.kth_to_last(3) == [3, 4, 5, 6]
+    assert test_ll.kth_to_last(3) == [4, 3, 2, 1]

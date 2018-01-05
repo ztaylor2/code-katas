@@ -118,9 +118,17 @@ class LinkedList(object):
                 next_node = next_node.next
             current_node = current_node.next
 
-    def kth_to_last(self):
+    def kth_to_last(self, k):
         """Return the kth to last elements in linked list."""
-        pass
+        current_node = self.head
+        for i in range(k - 1):
+            current_node = current_node.next
+
+        kth_to_last_list = []
+        while current_node:
+            kth_to_last_list.append(current_node.data)
+            current_node = current_node.next
+        return kth_to_last_list
 
     def __str__(self):
         """Return what the display method returns."""
