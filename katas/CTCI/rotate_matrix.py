@@ -23,9 +23,10 @@ output: [
 
 
 def rotate_matrix(input_matrix):
-    """Rotate an image by 90 degrees."""
+    """Rotate an matrix by 90 degrees."""
+    n = len(input_matrix) - 1
     output_matrix = input_matrix
-    for i in [0, 1, 2]:
-        for j in [0, 1, 2]:
-            output_matrix[j][3 - i] = input_matrix[i][j]
+    for i in range(n + 1):
+        for j in range(n + 1):
+            output_matrix[j][n - i] = input_matrix[i][j]
     return output_matrix
