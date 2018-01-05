@@ -218,40 +218,40 @@ def test_len():
     assert l.__len__() == 3
 
 
-def test_removes_dupes():
-    """Test method removes duplicate values."""
-    from remove_dupes import LinkedList
-    ll = LinkedList()
-    ll.push(1)
-    ll.push(1)
-    ll.remove_dupes()
-    assert ll.size() == 1
-    assert ll.head.data == 1
-    assert not ll.head.next
+# def test_removes_dupes():
+#     """Test method removes duplicate values."""
+#     from remove_dupes import LinkedList
+#     ll = LinkedList()
+#     ll.push(1)
+#     ll.push(1)
+#     ll.remove_dupes()
+#     assert ll.size() == 1
+#     assert ll.head.data == 1
+#     assert not ll.head.next
 
 
-def test_remove_dupes_move_vals_in_list():
-    """Test remove dupes move vals in list."""
-    from remove_dupes import LinkedList
-    test_ll = LinkedList()
-    test_ll.push(1)
-    test_ll.push(2)
-    test_ll.push(3)
-    test_ll.push(1)
-    test_ll.remove_dupes()
-    assert test_ll.size() == 3
+# def test_remove_dupes_move_vals_in_list():
+#     """Test remove dupes move vals in list."""
+#     from remove_dupes import LinkedList
+#     test_ll = LinkedList()
+#     test_ll.push(1)
+#     test_ll.push(2)
+#     test_ll.push(3)
+#     test_ll.push(1)
+#     test_ll.remove_dupes()
+#     assert test_ll.size() == 3
 
 
-def test_remove_multiple_diff_dupes():
-    """Test remove dupes removes multiple different duplications."""
-    from remove_dupes import LinkedList
-    test_ll = LinkedList()
-    test_ll.push(1)
-    test_ll.push(2)
-    test_ll.push(1)
-    test_ll.push(2)
-    test_ll.remove_dupes()
-    assert test_ll.size() == 2
+# def test_remove_multiple_diff_dupes():
+#     """Test remove dupes removes multiple different duplications."""
+#     from remove_dupes import LinkedList
+#     test_ll = LinkedList()
+#     test_ll.push(1)
+#     test_ll.push(2)
+#     test_ll.push(1)
+#     test_ll.push(2)
+#     test_ll.remove_dupes()
+#     assert test_ll.size() == 2
 
 
 def test_remove_multiple_dupes():
