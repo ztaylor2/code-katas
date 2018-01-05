@@ -21,11 +21,13 @@ output: [
         ]
 """
 
+from copy import deepcopy
+
 
 def rotate_matrix(input_matrix):
     """Rotate an matrix by 90 degrees."""
     n = len(input_matrix) - 1
-    output_matrix = input_matrix
+    output_matrix = deepcopy(input_matrix)
     for i in range(n + 1):
         for j in range(n + 1):
             output_matrix[j][n - i] = input_matrix[i][j]
