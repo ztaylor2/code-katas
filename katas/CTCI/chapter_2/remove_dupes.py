@@ -103,13 +103,9 @@ class LinkedList(object):
             previous_node = current_node
             while next_node:
                 if next_node.data == current_node.data:
-                    # delete_node = next_node.data
                     previous_node.next = next_node.next
                     next_node = next_node.next
-                    # remove method
-                    # self.remove(delete_node)
                     self._counter -= 1
-                    # return
                     continue
                 previous_node = next_node
                 next_node = next_node.next
