@@ -9,6 +9,7 @@ def test_partition_list_short_list():
     test_ll.push(1)
     test_ll.push(2)
     test_ll.push(3)
+    # import pdb; pdb.set_trace()
     partitioned_list = partition_list(test_ll, 2)
     assert partitioned_list.head.data == 1
     assert partitioned_list.head.next.data == 2
