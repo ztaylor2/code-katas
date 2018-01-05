@@ -60,3 +60,32 @@ def test_palendrome_long_list_true():
     test_ll.push('b')
     test_ll.push('a')
     assert linked_palendrome(test_ll) is True
+
+
+def test_pal_list_len_one():
+    """Test palendrome with list of length one."""
+    from kth_to_last import LinkedList
+    from palendrome import linked_palendrome
+    test_ll = LinkedList()
+    test_ll.push('a')
+    assert linked_palendrome(test_ll) is True
+
+
+def test_pal_list_len_two_true():
+    """Test palendrome with list of length two."""
+    from kth_to_last import LinkedList
+    from palendrome import linked_palendrome
+    test_ll = LinkedList()
+    test_ll.push('a')
+    test_ll.push('a')
+    assert linked_palendrome(test_ll) is True
+
+
+def test_pal_list_len_two_false():
+    """Test palendrome with list of length two."""
+    from kth_to_last import LinkedList
+    from palendrome import linked_palendrome
+    test_ll = LinkedList()
+    test_ll.push('a')
+    test_ll.push('b')
+    assert linked_palendrome(test_ll) is False
