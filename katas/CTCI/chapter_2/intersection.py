@@ -14,5 +14,6 @@ def list_intersection(list1, list2):
     while curr_node2:
         if curr_node2 in list1_nodes:
             return curr_node2
+        curr_node2 = curr_node2.next
 
     return None
