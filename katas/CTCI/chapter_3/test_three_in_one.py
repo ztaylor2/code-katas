@@ -70,3 +70,20 @@ def test_pop_returns_from_correct_stack(stack):
 def test_pop_no_value(stack):
     """Test pop returns no value when empty stack."""
     assert stack.pop(1) is None
+
+
+def test_pop_multiple_stack_multiple_vals(stack):
+    """Test pop returns correct vals when multiple stacks have multiple vals."""
+    stack.push(1, 1)
+    stack.push(1, 2)
+    stack.push(1, 3)
+    stack.push(2, 4)
+    stack.push(2, 5)
+    stack.push(2, 6)
+    stack.push(3, 7)
+    stack.push(3, 8)
+    stack.push(3, 9)
+    assert stack.pop(3) == 9
+    assert stack.pop(1) == 3
+    assert stack.pop(2) == 6
+    assert stack.pop(2) == 5
