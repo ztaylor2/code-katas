@@ -7,18 +7,25 @@ class Stack():
     def __init__(self):
         """Init stack."""
         self.stack_list = []
+        self._size = 0
 
     def push(self, val):
         """Add a value to the top of the stack."""
         self.stack_list.append(val)
+        self._size += 1
 
     def pop(self):
         """Pop value off of stack."""
+        self._size -= 1
         return self.stack_list.pop()
 
     def peek(self):
         """Peek at next value to be popped from stack."""
         return self.stack_list[-1]
+
+    def size(self):
+        """Return the size of the stack."""
+        return self._size
 
 
 class SetOfStacks():
