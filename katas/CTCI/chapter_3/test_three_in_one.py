@@ -87,3 +87,34 @@ def test_pop_multiple_stack_multiple_vals(stack):
     assert stack.pop(1) == 3
     assert stack.pop(2) == 6
     assert stack.pop(2) == 5
+    assert stack.pop(2) == 4
+    assert stack.pop(2) is None
+
+
+def test_peek_returns_none(stack):
+    """Test peek method returns none when no val in stack."""
+    assert stack.peek(1) is None
+
+
+def test_peek_returns_correct_val(stack):
+    """Test peek method returns correct val."""
+    stack.push(1, 1)
+    stack.push(1, 2)
+    stack.push(1, 3)
+    assert stack.peek(1) == 3
+
+
+def test_peek_returns_correct_stack(stack):
+    """Test peek method returns the correct stack."""
+    stack.push(1, 1)
+    stack.push(1, 2)
+    stack.push(1, 3)
+    stack.push(2, 4)
+    stack.push(2, 5)
+    stack.push(2, 6)
+    stack.push(3, 7)
+    stack.push(3, 8)
+    stack.push(3, 9)
+    assert stack.peek(3) == 9
+    assert stack.peek(2) == 6
+    assert stack.peek(1) == 3
