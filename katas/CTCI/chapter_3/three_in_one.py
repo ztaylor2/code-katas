@@ -26,7 +26,8 @@ class ThreeStacks():
         if stack_num not in (1, 2, 3):
             raise ValueError('Enter a valid stack number.')
         for i in range(len(self.stack_list)):
-            if self.stack_list[-i][0] == stack_num:
-                temp_val = self.stack_list[-i][1]
-                self.stack_list.pop(-i)
+            if self.stack_list[-(i + 1)][0] == stack_num:
+                temp_val = self.stack_list[-(i + 1)][1]
+                self.stack_list.pop(-(i + 1))
                 return temp_val
+        return None
