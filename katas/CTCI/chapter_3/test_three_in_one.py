@@ -20,3 +20,15 @@ def test_push_no_stack_raises(stack):
     """Test push into invalid stack num raises error."""
     with pytest.raises(ValueError):
         stack.push(5, 1)
+
+
+def test_pop_raises_invalid_stack(stack):
+    """Test pup raises error with invalid stack."""
+    with pytest.raises(ValueError):
+        stack.pop(5)
+
+
+def test_pop_returns_correct_val(stack):
+    """Test pop returns correct val one stack."""
+    stack.push(1, 1)
+    assert stack.pop(1) == 1
