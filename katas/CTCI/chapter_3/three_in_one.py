@@ -14,4 +14,6 @@ class ThreeStacks():
 
     def push(self, stack_num, val):
         """."""
+        if stack_num not in (1, 2, 3):
+            raise ValueError('Enter a valid stack number.')
         self.stack_list.append((stack_num, val))
