@@ -32,3 +32,10 @@ def test_pop_returns_correct_val(stack):
     """Test pop returns correct val one stack."""
     stack.push(1, 1)
     assert stack.pop(1) == 1
+
+
+def test_pop_deletes_val_from_stack(stack):
+    """Test pop deletes value from stack list."""
+    stack.push(1, 1)
+    stack.pop(1)
+    assert len(stack.stack_list) == 0
