@@ -35,4 +35,13 @@ def test_pop_method_deletes_stack(setofstacks):
     assert setofstacks.pop() == 9
 
 
-# def test_
+def test_peek(setofstacks):
+    """Test the peek method for a set of stacks."""
+    for i in range(12):
+        setofstacks.push(i)
+    assert setofstacks.peek() == 11
+    assert setofstacks.pop() == 11
+    assert setofstacks.peek() == 10
+    assert setofstacks.pop() == 10
+    assert setofstacks.peek() == 9
+    assert setofstacks.pop() == 9

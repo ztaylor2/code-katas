@@ -59,4 +59,4 @@ class SetOfStacks():
     def peek(self):
         """Peek at next value to be returned."""
         stack_index = self._size // (self.stack_capacity + 1)
-        return self.stack[stack_index].peek()
+        return self.stacks[stack_index].peek()
