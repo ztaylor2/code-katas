@@ -31,4 +31,8 @@ def test_pop_method_deletes_stack(setofstacks):
         setofstacks.push(i)
     assert setofstacks.pop() == 11
     assert setofstacks.pop() == 10
+    assert len(setofstacks.stacks) == 1
     assert setofstacks.pop() == 9
+
+
+# def test_

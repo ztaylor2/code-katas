@@ -51,8 +51,9 @@ class SetOfStacks():
         stack_index = self._size // (self.stack_capacity + 1)
         temp_val = self.stacks[stack_index].pop()
         self._size -= 1
-        if isinstance(self._size / self.stack_capacity, int):
-            self.stacks.pop()
+        if self._size:
+            if self._size % self.stack_capacity == 0:
+                self.stacks.pop()
         return temp_val
 
     def peek(self):
