@@ -15,11 +15,12 @@ def breadth_first(graph, start, finish):
     children_nodes = [start]
     visited = []
     while children_nodes:
-        for child in graph[children_nodes[0]]:
-            if child == finish:
-                    return True
-            if children_nodes not in visited:
-                children_nodes.append(child)
-            visited.append(child)
-        children_nodes = children_nodes[-1:]
+        if children_nodes[0] in graph:
+            for child in graph[children_nodes[0]]:
+                if child == finish:
+                        return True
+                if children_nodes not in visited:
+                    children_nodes.append(child)
+                visited.append(child)
+        children_nodes.pop(0)
     return False
