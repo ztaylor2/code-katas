@@ -14,7 +14,7 @@ def list_of_depths(tree):
     while node_children:
         linked_lists.append(LinkedList([node.val for node in node_children]))
         before_add = len(node_children)
-        for node in node_children:
+        for node in node_children[::]:
             if node.right:
                 node_children.append(node.right)
             if node.left:
