@@ -10,11 +10,9 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
 def phone_num_letters(number_sequence):
     """Determine all possible letter combos."""
-    num_letters = {
-                    '1': [],
-                    '2': ['a', 'b', 'c'],
-                    '3': ['d', 'e', 'f']
-                   }
+    num_letters = {'1': [],
+                   '2': ['a', 'b', 'c'],
+                   '3': ['d', 'e', 'f']}
 
     letter_combos = []
     possible_string = ''
@@ -31,5 +29,22 @@ def phone_num_letters(number_sequence):
             find_combos(count + 1, possible_string + letter)
 
     find_combos(count, possible_string)
+
+    return letter_combos
+
+
+def phone_letters(num_sequence):
+    """."""
+    num_letters = {'1': [],
+                   '2': ['a', 'b', 'c'],
+                   '3': ['d', 'e', 'f']}
+
+    nums = list(num_sequence)
+    letter_combos = ['']
+    while nums:
+
+        num = nums.pop(0)
+
+        letter_combos = [l + n for l in letter_combos for n in num_letters[num]]
 
     return letter_combos
