@@ -32,10 +32,8 @@ def is_captured(i, j, go_board):
         x, y = to_visit.pop(0)
         pots = [(x + a[0], y + a[1]) for a in ((0, 1), (0, -1), (1, 0), (-1, 0))]
         for pot in pots:
-            # if go_board[pot[0]][pot[1]]:
             if go_board[pot[0]][pot[1]] == 0:
                 return False
             elif go_board[pot[0]][pot[1]] == go_board[i][j] and pot not in visited:
                 to_visit.append(pot)
-        # import pdb; pdb.set_trace()
     return True
