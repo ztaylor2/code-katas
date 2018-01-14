@@ -13,8 +13,18 @@ Example:
 
 
 def two_sum(nums, target):
-    """."""
+    """Big O(n^2)."""
     for i, num in enumerate(nums):
         for x, add_num in enumerate(nums[i + 1:], start=i + 1):
             if num + add_num == target:
                 return [i, x]
+
+
+def two_sum_n(nums, target):
+    """Big O(n)."""
+    nums_seen = {}
+    for i, num in enumerate(nums):
+        nums_seen[num] = i
+        if target - num in nums_seen:
+            return [nums_seen[target - num], i]
+    return []
