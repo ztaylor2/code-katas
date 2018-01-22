@@ -17,7 +17,7 @@ def dijksta(graph, start, end):
 
         for child, edge in graph[current]:
             if child not in visited:
-                if distances[child][0] < distances[current][0] + edge:
+                if distances[child][0] > distances[current][0] + edge:
                     distances[child] = (distances[current][0] + edge, distances[current][1] + [child])
                 next_nodes.append(child)
 
