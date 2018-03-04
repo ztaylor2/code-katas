@@ -30,6 +30,7 @@ def each_char_unique(input_string):
 
     return True
 
+# without data structure 
 
 def each_char_unique_no_ds(input_string):
     """Test if each car is unique without using any data structures."""
@@ -39,3 +40,13 @@ def each_char_unique_no_ds(input_string):
                 return False
 
     return True
+
+"""
+solutions found online:
+
+def is_unique(x):
+    if len(x) > len(set(x)):
+
+def allUnique(x):
+    seen = set()
+    return not any(i in seen or seen.add(i) for i in x)
